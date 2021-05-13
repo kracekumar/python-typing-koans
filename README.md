@@ -6,7 +6,7 @@ A set of examples to learn optional static typing in Python.
 
 - Install Python 3.9.4+.
 - Install poetry - https://python-poetry.org/docs/#installation .
-- Clone the repository and change the directory to clone one.
+- Clone the repository and change the directory to the cloned one.
 - Install requirements like `poetry install`.
 
 - If you want to use pip, `pip install -r requirements.txt`.
@@ -20,7 +20,41 @@ about Python hints. It starts with simple variable annotation and covers topics 
 
 ### How to run?
 
+- Display one koan file
+
+``` bash
+$cat koans/py/100-easy-variable-wrong-type.py
+# msg variable is wrongly annotated as int, annotate it as string
+msg: int = "hello world!"
+
+# salary is annotated as int, annotate as float
+salary: int = 2345.67
+
+# Set is_active as bool
+is_active: int = True
+```
+
 - Run one koan file
+
+``` bash
+$poetry run python cli.py one koans/py/100-easy-variable-wrong-type.py
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+Running Mypy on koan file koans/py/100-easy-variable-wrong-type.py
+──────────────────────────────────  Mypy errors in koan file koans/py/100-easy-variable-wrong-type.py ───────────────────────────────────
+koans/py/100-easy-variable-wrong-type.py:2: error: Incompatible types in assignment (expression has type "str", variable has type "int")
+    msg: int = "hello world!"
+               ^
+koans/py/100-easy-variable-wrong-type.py:5: error: Incompatible types in assignment (expression has type "float", variable has type
+"int")
+    salary: int = 2345.67
+                  ^
+Found 2 errors in 1 file (checked 1 source file)
+
+────────────────────────────────────────────────────────────────── End ──────────────────────────────────────────────────────────────────
+─────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────────
+```
+
+- Run after fixing the errors(riddles) in the file.
 
 ``` bash
 $poetry run python cli.py one koans/py/100-easy-variable-wrong-type.py
