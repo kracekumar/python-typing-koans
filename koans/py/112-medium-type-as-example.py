@@ -1,3 +1,7 @@
+"""
+Koan to learn type of class when passed as an argument.
+"""
+
 import json
 from typing import Any, Type, Union
 

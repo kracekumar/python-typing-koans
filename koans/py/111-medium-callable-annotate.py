@@ -1,19 +1,12 @@
+"""
+Koan to learn annotating the callables or functions.
+"""
 import operator
-from collections.abc import Callable, Iterable
-from typing import TypedDict
-
-
-class UserData(TypedDict):
-    user_id: int
-    is_active: bool
-
 
 # Annotate the function arguments
 # Documentation: https://docs.python.org/3/library/typing.html?highlight=typing#callable
 # Documentation: https://docs.python.org/3/library/typing.html?highlight=typing#typing.Iterable
-def user_sort(
-    data: Iterable[UserData], func: Callable[[UserData], int]
-) -> Iterable[UserData]:
+def user_sort(data, func):
     return sorted(data, key=func)
 
 
