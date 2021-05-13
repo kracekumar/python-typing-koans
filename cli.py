@@ -36,7 +36,7 @@ def run_mypy(path: str):
 def run_one(path):
     console = Console()
     console.rule("")
-    console.print(f"Running Mypy on koan file {path}")
+    console.print(f"Running mypy on koan file {path}")
     res = run_mypy(path)
     display_result(console, path, res, display="all")
     console.rule()
@@ -59,7 +59,7 @@ def display_summary(console: Console, run_result: dict[str, Result]):
 
 def display_result(console: Console, file_name: str, result: Result, display="all"):
     if display in ("all", "error") and result.exit_code != 0:
-        console.rule(f"[bold] Mypy errors in koan file {file_name}")
+        console.rule(f"[bold] mypy errors in koan file {file_name}")
         if result.result:
             console.print(result.result)
 
@@ -87,7 +87,7 @@ def summary(display_error):
     console.rule()
     dirs = DIRS
     run_result: dict[str, Result] = {}
-    with console.status("Running Mypy against all koan files ...", spinner="moon"):
+    with console.status("Running mypy against all koan files ...", spinner="moon"):
         for directory in dirs:
             for py_file in sorted(Path(directory).rglob("*.py")):
                 name = str(py_file)
