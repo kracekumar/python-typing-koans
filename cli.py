@@ -13,6 +13,8 @@ class Result:
     error: str
     exit_code: int
 
+DIRS = ["koans/py"]
+
 
 def run_mypy(path: str):
     result, error, exit_code = api.run(
@@ -83,7 +85,7 @@ def cli():
 def summary(display_error):
     console = Console()
     console.rule()
-    dirs = ["koans/py"]
+    dirs = DIRS
     run_result: dict[str, Result] = {}
     with console.status("Running Mypy against all koan files ...", spinner="moon"):
         for directory in dirs:
@@ -110,6 +112,16 @@ def summary(display_error):
 @click.argument("path", required=True, type=click.Path())
 def one(path):
     run_one(path)
+
+
+@cli.command()
+def list():
+    console = Console()
+    console.rule()
+    for directory in DIRS:
+        for py_file in sorted(Path(directory).rglob("*.py")):
+            console.print(py_file)
+    console.rule()
 
 
 if __name__ == "__main__":
