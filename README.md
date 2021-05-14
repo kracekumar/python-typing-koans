@@ -18,6 +18,10 @@ contains a set of files which will teach you python type-hints by fixing errors.
 in the increasing order. By solving errors in the each file in the increasing suffix order, you will gain knowledge
 about Python hints. It starts with simple variable annotation and covers topics `function annotation, generics, protocols, classes`.
 
+### How to learn?
+
+The existing files has no annotations or wrong annotation, as a learner, you run one file and fix each errors till there are no type-errors. In the next section, you will learn, how to list all koans and how to run the modified koan file.
+
 ### How to run?
 
 - Display one koan file
