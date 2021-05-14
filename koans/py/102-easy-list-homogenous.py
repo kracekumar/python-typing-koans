@@ -1,3 +1,6 @@
+"""
+Koan to learn annotating the Python list data type
+"""
 from typing import Any
 
 # Annotate list of integers

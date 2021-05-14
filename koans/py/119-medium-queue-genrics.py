@@ -1,3 +1,6 @@
+"""
+Koan to learn generic declaration
+"""
 import typing as t
 
 

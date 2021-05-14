@@ -1,3 +1,6 @@
+"""
+Koan to learn annotating the factory method and return types
+"""
 # Example: https://en.wikipedia.org/wiki/Factory_method_pattern#Python
 
 from abc import ABC, abstractmethod

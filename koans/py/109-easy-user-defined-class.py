@@ -1,17 +1,17 @@
+"""
+Koan to learn annotating the class
+"""
 import datetime
 import random
 from string import ascii_letters
 from typing import TypedDict
 
 
+# Annotate the user data to fit the get_random_user_data
 class UserData(TypedDict):
-    name: str
-    email: str
-    is_active: bool
-    last_seen: datetime.datetime
+    pass
 
-
-def get_random_user_data() -> UserData:
+def get_random_user_data():
     generated_string: str = "".join(choice(ascii_letters) for x in range(15))
     return {
         "name": generated_string,

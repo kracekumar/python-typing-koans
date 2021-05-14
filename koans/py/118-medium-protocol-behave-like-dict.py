@@ -1,3 +1,6 @@
+"""
+Koan to learn annotating structural typing, Protocol - dict like behavior
+"""
 import typing as t
 
 import requests

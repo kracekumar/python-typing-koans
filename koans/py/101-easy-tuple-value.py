@@ -1,3 +1,6 @@
+"""
+Koan to learn annotating the Python tuple
+"""
 from typing import Any
 
 # result is annotated as Any, annotate it as tuple

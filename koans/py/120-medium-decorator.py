@@ -1,3 +1,6 @@
+"""
+Koan to learn annotating the decorator
+"""
 import typing as t
 
 # annotate the dict to store only ints

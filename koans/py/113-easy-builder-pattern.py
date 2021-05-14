@@ -1,3 +1,6 @@
+"""
+Koan to learn annotating the self instance
+"""
 # This is called builder pattern or fluent interface. You can read about in the following posts
 # https://kracekumar.com/post/100897281440/fluent-interface-in-python/
 # https://python-patterns.guide/gang-of-four/builder/

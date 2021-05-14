@@ -1,3 +1,6 @@
+"""
+Koan to learn understanding protocol
+"""
 import typing as t
 
 

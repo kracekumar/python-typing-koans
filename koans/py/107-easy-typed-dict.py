@@ -1,3 +1,7 @@
+"""
+Koan to learn annotating the dictionary with fixed key/values.
+"""
+
 import datetime
 import random
 from uuid import UUID4

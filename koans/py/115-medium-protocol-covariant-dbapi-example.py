@@ -1,3 +1,6 @@
+"""
+Koan to understanding working of Protocol and class inheritance return types
+"""
 from typing import Generic, Optional, Protocol, Sequence, Tuple, TypeVar, Union
 
 # PEP249 defines how dbapi structure - https://www.python.org/dev/peps/pep-0249

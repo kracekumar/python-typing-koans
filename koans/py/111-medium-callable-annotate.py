@@ -1,7 +1,6 @@
 """
 Koan to learn annotating the callables or functions.
 """
-import operator
 
 # Annotate the function arguments
 # Documentation: https://docs.python.org/3/library/typing.html?highlight=typing#callable

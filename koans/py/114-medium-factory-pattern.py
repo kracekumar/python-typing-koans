@@ -1,6 +1,9 @@
-# -*- coding: utf-8 -
+"""
+Koan to learn annotating the factory method and overriding methods return types
+"""
 
 """The code is copied from https://github.com/benoitc/gunicorn/blob/master/gunicorn/sock.py
+with modification.
 A lot of code is removed here for sake of understanding.
 """
 import errno

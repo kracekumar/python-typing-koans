@@ -1,3 +1,6 @@
+"""
+Koan to learn annotating the class variables
+"""
 import datetime
 import random
 from string import ascii_letters
@@ -22,7 +25,7 @@ def get_random_user_data() -> UserData:
 
 
 class User:
-    # Annotate class variable
+    # Annotate the class variable
     # Documentation: https://docs.python.org/3/library/typing.html#typing.ClassVar
     users: list = []
 
