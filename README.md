@@ -141,7 +141,7 @@ $poetry run python cli.py summary
 
 ### How to contribute?
 
-- If you feel, some examples will make a great learning material, add a new file in the format `1xx-<easy|medum|hard>-filename.py` and send a PR.
+- If you feel, some examples will make a great learning material, add a new file in the format `1xx-<easy|medium|hard>-filename.py` and send a PR.
 - If you feel some of the koan file is missing enough links or not well-defined please send a PR or raise an issue.
 - If you feel some of the concepts needs a better examples or missing, open a PR or create an issue.
 
