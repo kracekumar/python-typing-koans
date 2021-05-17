@@ -12,9 +12,9 @@ class UserData(TypedDict):
     pass
 
 def get_random_user_data():
-    generated_string: str = "".join(choice(ascii_letters) for x in range(15))
+    name: str = "".join(random.choice(ascii_letters) for x in range(15))
     return {
-        "name": generated_string,
+        "name": name,
         "email": f"{name}@gmail.com",
         "is_active": random.choice([True, False]),
         "last_seen": datetime.datetime.utcnow(),
