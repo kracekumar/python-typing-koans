@@ -11,6 +11,7 @@ from typing import TypedDict
 class UserData(TypedDict):
     pass
 
+
 def get_random_user_data():
     name: str = "".join(random.choice(ascii_letters) for x in range(15))
     return {
