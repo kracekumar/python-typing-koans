@@ -108,20 +108,20 @@ def summary(display_error):
     console.rule()
 
 
-@cli.command()
+@cli.command(help="Run one koan file")
 @click.argument("path", required=True, type=click.Path())
 def one(path):
     run_one(path)
 
 
-@cli.command()
+@cli.command(help="List all the koans")
 def list():
     console = Console()
-    console.rule()
+    console.rule('Koan files')
     for directory in DIRS:
         for py_file in sorted(Path(directory).rglob("*.py")):
             console.print(py_file)
-    console.rule()
+    console.rule('End')
 
 
 if __name__ == "__main__":
