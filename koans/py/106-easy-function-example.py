@@ -7,4 +7,4 @@ def square(x):
     return x * x
 
 
-squares = [square(x) for val in range(1, 10)]
+squares = [square(val) for val in range(1, 10)]
