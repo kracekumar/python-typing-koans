@@ -3,9 +3,11 @@ from dataclasses import dataclass
 from pathlib import Path
 
 import click
+import uuid
 from mypy import api
 from rich.console import Console
 from rich.table import Table
+import shutil
 
 
 @dataclass
@@ -17,20 +19,26 @@ class Result:
 DIRS = ["koans/py"]
 
 
+def get_cache_dir():
+    return str(uuid.uuid4())
+
+
+def delete_mypy_cache(directory):
+    cache_dir = Path(directory)
+    if cache_dir.exists():
+        shutil.rmtree(cache_dir)
+
+
 def run_mypy(path: str):
+    cache_dir = get_cache_dir()
     result, error, exit_code = api.run(
         [
             path,
-            "--strict",
-            "--disallow-any-expr",
-            "--disallow-any-explicit",
-            "--disallow-untyped-calls",
-            "--disallow-untyped-defs",
-            "--disallow-incomplete-defs",
-            "--disallow-any-expr",
-            "--pretty",
+            "--config-file=mypy.ini",
+            f"--cache-dir={cache_dir}"
         ]
     )
+    delete_mypy_cache(cache_dir)
     return Result(result=result, error=error, exit_code=exit_code)
 
 
