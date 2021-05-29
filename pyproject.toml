@@ -12,6 +12,8 @@ click = "^7.1.2"
 black = "^21.5b1"
 requests = "^2.25.1"
 rich = "^10.2.0"
+fastapi = "^0.65.1"
+uvicorn = {extras = ["standard"], version = "^0.13.4"}
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.23.1"
