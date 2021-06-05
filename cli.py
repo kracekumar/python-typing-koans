@@ -16,7 +16,8 @@ class Result:
     error: str
     exit_code: int
 
-DIRS = ["koans/py"]
+
+DIRS = {"python": "koans/py", "django": "koans/dj_koans/mysite/polls/koans"}
 
 
 def get_cache_dir():
@@ -32,11 +33,7 @@ def delete_mypy_cache(directory):
 def run_mypy(path: str):
     cache_dir = get_cache_dir()
     result, error, exit_code = api.run(
-        [
-            path,
-            "--config-file=mypy.ini",
-            f"--cache-dir={cache_dir}"
-        ]
+        [path, "--config-file=mypy.ini", f"--cache-dir={cache_dir}"]
     )
     delete_mypy_cache(cache_dir)
     return Result(result=result, error=error, exit_code=exit_code)
@@ -94,7 +91,7 @@ def cli():
 def summary(display_error):
     console = Console()
     console.rule()
-    dirs = DIRS
+    dirs = DIRS.values()
     run_result: dict[str, Result] = {}
     with console.status("Running mypy against all koan files ...", spinner="moon"):
         for directory in dirs:
@@ -126,11 +123,12 @@ def one(path):
 @cli.command(help="List all the koans")
 def list():
     console = Console()
-    console.rule('Koan files')
-    for directory in DIRS:
+    console.rule("Koan files")
+    for tag, directory in DIRS.items():
+        console.rule(tag)
         for py_file in sorted(Path(directory).rglob("*.py")):
             console.print(py_file)
-    console.rule('End')
+    console.rule("End")
 
 
 if __name__ == "__main__":

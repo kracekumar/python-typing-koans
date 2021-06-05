@@ -7,7 +7,7 @@ from typing import Type
 
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
-    pub_date = models.DateTimeField('date published')
+    pub_date = models.DateTimeField("date published")
 
     # Annotate the return type
     def was_published_recently(self):
@@ -27,8 +27,7 @@ class Choice(models.Model):
 
 # annotate the return type
 def create_question(question_text: str):
-    qs = Question(question_text=question_text,
-                  pub_date=timezone.now())
+    qs = Question(question_text=question_text, pub_date=timezone.now())
     qs.save()
     return qs
 
