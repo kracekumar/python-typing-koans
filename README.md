@@ -2,7 +2,7 @@
 
 A set of examples to learn optional static typing in Python.
 
-[![asciicast](https://asciinema.org/a/4419119.svg)](https://asciinema.org/a/419119)
+[![asciicast](https://asciinema.org/a/419119.svg)](https://asciinema.org/a/419119)
 
 ### Install
 
