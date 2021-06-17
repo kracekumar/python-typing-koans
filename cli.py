@@ -17,7 +17,8 @@ class Result:
     exit_code: int
 
 
-DIRS = {"python": "koans/py", "django": "koans/dj_koans/mysite/polls/koans"}
+DIRS = {"python": "koans/py", "django": "koans/dj_koans/mysite/polls/koans",
+        "drf": "koans/dj_koans/mysite/polls/drf_koans"}
 
 
 def get_cache_dir():
