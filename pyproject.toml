@@ -14,6 +14,9 @@ requests = "^2.25.1"
 rich = "^10.2.0"
 Django = "^3.2.3"
 django-stubs = "^1.8.0"
+djangorestframework-stubs = "^1.4.0"
+djangorestframework = "^3.12.4"
+pytest = "^6.2.4"
 
 [tool.poetry.dev-dependencies]
 ipython = "^7.23.1"

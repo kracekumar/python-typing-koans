@@ -148,6 +148,12 @@ $poetry run python cli.py summary
 - [Optional Static Typing in Python Talk by Guido](https://www.youtube.com/watch?v=GiZKuyLKvAA&t=2521s)
 - [Collection of awesome Python types, stubs, plugins, and tools to work with them](https://github.com/typeddjango/awesome-python-typing)
 
+### Supported Koans
+
+- Python - `koans/py`
+- Django - `koans/dj_koans/mysite/polls/koans`
+- Django Rest Framework - `koans/dj_koans/mysite/polls/drf_koans`
+
 ### How to contribute?
 
 - If you feel, some examples will make a great learning material, add a new file in the format `1xx-<easy|medium|hard>-filename.py` and send a PR.
@@ -157,4 +163,4 @@ $poetry run python cli.py summary
 ### To Support
 
 - [ ] Add async example koans
-- [ ] Add third party annotation koans like django, DRF in separate sub-directory in `koans/`.
+- [X] Add third party annotation koans like django, DRF in separate sub-directory in `koans/`.
