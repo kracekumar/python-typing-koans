@@ -24,7 +24,7 @@ about Python hints. It starts with simple variable annotation and covers topics 
 
 The existing files has no annotations or wrong annotation, as a learner, you run one file and fix each errors till there are no type-errors. In the next section, you will learn, how to list all koans and how to run the modified koan file.
 
-All the koan iles ar present in the following directories
+All the koan files are present in the following directories
 
 ``` python
 koans/py
