@@ -3,7 +3,7 @@ Koan to learn type of class when passed as an argument.
 """
 
 import json
-from typing import Any, Type, Union
+from typing import Any, Type
 
 # Figure out how to ignore Any Error
 JSONData = dict[str, Any]
@@ -21,7 +21,7 @@ class JSONResponse:
 # Annotate the return type as the type of response class
 # Documentation: https://docs.python.org/3/library/typing.html?highlight=typing#typing.Type
 def make_response(resp_klass, data):
-    return JSONResponse(data).make_response()
+    return resp_klass(data).make_response()
 
 
 def main() -> None:
